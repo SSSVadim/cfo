@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Ваш финансовый ассистент</title>
+	
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="css/style.min.css">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+<!-- <meta name="robots" content="noindex, nofollow" /> -->
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+</head>
+<body>
+
+
+
+<!-- ===========================HEADER==========================================  -->
+<!-- ===========================================================================  -->
+<div class="wrapper">
+<header class="header">
+	<!-- Top menu -->
+	<div class="header-top">
+		<div class="container">
+			<div class="header-top__body">
+				<div class="header-top__social-wrapper">
+					<a href="https://facebook.com" target="_blank" class="header-top__social-item header-top-social">
+						<i class="fab fa-facebook-f header-top-social__icon header-top-social__icon_facebook"></i>
+						<span class="header-top-social__link">Мы на Facebook</span>
+					</a>
+					<a href="https://instagram.com" target="_blank" class="header-top__social-item header-top-social">
+						<i class="fab fa-instagram header-top-social__icon header-top-social__icon_instagram"></i>
+						<span class="header-top-social__link">Мы в Instagram</span>
+					</a>
+				</div>
+				<div class="header-top__tel-item tel-item">
+					<div class="tel-item__icon-wrapper">
+						<i class="fa fa-phone-alt tel-item__icon"></i>
+					</div>
+					<a href="tel:+79991112233" class="tel-item__link">+7 999 111-22-33</a>
+				</div>
+				
+				
+				<a href="#callback" class="header-top__btn pl">Заказать звонок</a>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Bottom menu -->
+	<div class="header-bottom">
+		<div class="container">
+			<div class="header-bottom__body">
+				<a href="" class="header-bottom__logo logo">
+					<img src="img/logo/logo9.png" alt="logo" />
+				</a>
+				<div class="adaptive-header-menu"> 
+					<div class="adaptive-header-menu__mask"></div>
+				</div>
+				<div class="header-menu__wrapper">
+					<div class="header-menu__icon">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>	
+				<nav class="header-menu">
+					<ul class="header-menu__list">
+						<li><a href="#main" class="header-menu__link activePoint goto">О компании</a></li>
+						<li><a href="#process__title" class="header-menu__link goto">Наши решения</a></li>
+						<li><a href="#footer-bottom-body" class="header-menu__link goto">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+
+
+
+<!-- ==========================CONTENT==========================================  -->
+<!-- ===========================================================================  -->
+<main class="page">
+	
+<!-- FIRST SCREEN -->
+	<!-- ============================== -->
+	<section class="first-screen main" data-scroll="active">
+		<div class="container">			
+			<div class="first-screen__content-wrapper">
+				<h1 class="first-screen__title">ВАШ <span>ЛИЧНЫЙ CFO</span> НА СТРАЖЕ ВАШЕГО БИЗНЕСА</h1>
+				<div class="first-screen__subtitle">
+					<p>Как отследить финансовые потоки? Куда уходят средства?</p>
+					<p>Почему постоянно кассовые разрывы? Где найти новые средства для инвестиций?</p>
+					<p>Что делать с налоговой нагрузкой?</p>
+				</div>
+				<a href="#callback" class="first-screen__btn btn pl">Получить решение</a>	
+			</div>  
+			<a href="#advantages__title" class="first-screen__arrow goto">
+				<img src="img/firstscreen/arrow_d.svg" alt="#" />
+			</a>			
+		</div>
+		<div class="first-screen__background ibg">
+			<img src="img/firstscreen/background.jpg" alt="background" />
+		</div>
+		
+	</section>
+	<!-- END FIRST SCREEN -->	
+
+<!-- CREDIT -->
+<!-- ============================== -->
+<section class="credit section content-section">
+	<div class="container">
+		
+		<div class="credit__row">
+			<div class="credit__col credit__col_l">
+				<h2 class="title credit__title">Я хочу получить кредит</h2>
+				<div class="credit__form credit-form__wrapper">
+					<h3 class="credit-form__title">Заполните форму</h3>
+					<form action="mail.php" method="POST" class="credit-form">
+						<div class="credit-form__select-label-text credit-form__field-desc">Вид кредита*</div>
+						<select name="credit-type" class="credit-form__select">
+							<option value="business" selected="selected">Кредит бизнесу</option>
+							<option value="home">Ипотечный кредит</option>
+							<option value="custom">Потребительский кредит</option>
+							<option value="car">Автокредит</option>
+							<option value="retiree">Пенсионный кредит</option>
+						</select>
+						<div class="credit-form__field-wrapper">
+							<div class="credit-form__field-desc">Телефон</div>
+							<div class="form__error-msg">* Укажите верный номер</div>
+							<input autocomplete="off" type="tel" name="credit-tel" data-value="Введите Ваш номер" class="credit-form__field-phone input phone req" />
+							
+						</div>						
+						<div class="credit-form__field-wrapper">
+							<div class="credit-form__field-desc">Сумма кредита (руб) </div>
+							<input autocomplete="off" type="number" name="credit-value" data-value="10000" step="10000" class="credit-form__field-text input" id="credit-value" />
+							<div id="rangecredit"></div>							
+						</div>
+						<div class="credit-form__field-wrapper">
+							<div class="credit-form__field-desc">Срок кредита (лет)</div>
+							<input autocomplete="off" type="number" name="credit-period" data-value="3" class="credit-form__field-text input" id="credit-period" />
+							<div id="rangecredit-period"></div>							
+						</div>
+						
+						<div class="credit-form__buttons">
+							<button type="submit" class="credit-form__btn btn">Отправить</button>
+						</div>
+					</form>	
+				</div>
+
+			</div>
+			<div class="credit__col credit__col_s">
+				<div class="credit__partners credit-partners">
+					<div class="credit-partners__title">Банки партнеры</div>
+					
+					<!-- patrners list wrapper -->
+					<div class="credit-partners__list">
+						<!-- partner 1 -->
+						<a href="#" class="credit-partners__item">
+							<img src="img/partners/bank1.png" alt="" />
+						</a>
+						<!-- partner 2 -->
+						<a href="#" class="credit-partners__item">
+							<img src="img/partners/bank2.png" alt="" />
+						</a>
+						<!-- partner 3 -->
+						<a href="#" class="credit-partners__item">
+							<img src="img/partners/bank3.png" alt="" />
+						</a>
+						<!-- partner 4 -->
+						<a href="#" class="credit-partners__item">
+							<img src="img/partners/bank4.png" alt="" />
+						</a>
+						<!-- partner 5 -->
+						<a href="#" class="credit-partners__item">
+							<img src="img/partners/bank5.png" alt="" />
+						</a>
+						<!-- partner 6 -->
+						<a href="#" class="credit-partners__item">
+							<img src="img/partners/bank6.png" alt="" />
+						</a>
+					</div>
+
+					<div class="credit-partners__another-partners">и другие...</div>	
+					<a href="#callback" class="credit-partners__btn btn pl">Запонить заявку</a>
+					<div class="credit-partners__agree">Нажимая на кнопку, вы даете согласие на обработку
+					<a href="#">персональных данных</a>	
+					</div>	
+
+
+				</div>
+			</div>
+		</div>
+		
+			
+	</div>
+</section>
+<!-- END CREDIT -->
+
+
+<!-- ADVANTAGES -->
+<!-- ============================== -->
+<section class="advantages section">
+	<div class="container">
+		<h2 class="advantages__title title">преимущества работы с <span>“НОВЫЕ БИЗНЕС СИСТЕМЫ”</span></h2>
+			<ul class="advantage-block__container">
+				<!-- Card 1 -->
+				<li class="advantage-block__wrapper">
+					<div class="advantage-block__advantage-item advantage-item">
+						<div class="advantage-item__img-wrap">
+							<div class="advantage-item__img">
+								<img src="img/advantages/01shield.svg" alt="icon" />
+							</div>
+						</div>						
+						<div class="advantage-item__content-wrap">
+							<div class="advantage-item__title">Надежно</div>
+							<div class="advantage-item__text">
+								Мы 13 лет работаем в сфере кредитования физических и юридических лиц
+							</div>
+						</div>
+					</div>
+				</li>
+				<!-- Card 2 -->
+				<li class="advantage-block__wrapper">
+					<div class="advantage-block__advantage-item advantage-item">
+						<div class="advantage-item__img-wrap">
+							<div class="advantage-item__img">
+								<img src="img/advantages/02piggy-bank.svg" alt="icon" />
+							</div>
+						</div>						
+						<div class="advantage-item__content-wrap">
+							<div class="advantage-item__title">Выгодно</div>
+							<div class="advantage-item__text">
+								Для вас снизим базовую ставку банка на 0,5 - 2% годовых
+							</div>
+						</div>
+					</div>
+				</li>
+				<!-- Card 3 -->
+				<li class="advantage-block__wrapper">
+					<div class="advantage-block__advantage-item advantage-item">
+						<div class="advantage-item__img-wrap">
+							<div class="advantage-item__img">
+								<img src="img/advantages/03stop-watch.svg" alt="icon" />
+							</div>
+						</div>						
+						<div class="advantage-item__content-wrap">
+							<div class="advantage-item__title">Быстро</div>
+							<div class="advantage-item__text">
+								Заявки наших клиентов рассматриваются банком в приоритетном порядке
+							</div>
+						</div>
+					</div>
+				</li>
+				<!-- Card 4 -->
+				<li class="advantage-block__wrapper">
+					<div class="advantage-block__advantage-item advantage-item">
+						<div class="advantage-item__img-wrap">
+							<div class="advantage-item__img">
+								<img src="img/advantages/04work.svg" alt="icon" />
+							</div>
+						</div>						
+						<div class="advantage-item__content-wrap">
+							<div class="advantage-item__title">Профессионально</div>
+							<div class="advantage-item__text">
+								Мы составим кредитную заявку и соберем пакет необходимых документов
+							</div>
+						</div>
+					</div>
+				</li>
+				<!-- Card 5 -->
+				<li class="advantage-block__wrapper">
+					<div class="advantage-block__advantage-item advantage-item">
+						<div class="advantage-item__img-wrap">
+							<div class="advantage-item__img">
+								<img src="img/advantages/05executive.svg" alt="icon" />
+							</div>
+						</div>						
+						<div class="advantage-item__content-wrap">
+							<div class="advantage-item__title">Удобно</div>
+							<div class="advantage-item__text">
+								Вам не нужно ездить по банкам и стоять в очередях
+							</div>
+						</div>
+					</div>
+				</li>
+				<!-- Card 6 -->
+				<li class="advantage-block__wrapper">
+					<div class="advantage-block__advantage-item advantage-item">
+						<div class="advantage-item__img-wrap">
+							<div class="advantage-item__img">
+								<img src="img/advantages/06user.svg" alt="icon" />
+							</div>
+						</div>						
+						<div class="advantage-item__content-wrap">
+							<div class="advantage-item__title">Индивидуально</div>
+							<div class="advantage-item__text">
+								Ваш персональный менеджер доступен ежедневно с 10 до 22:00
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+	</div>
+</section>
+<!-- END ADVANTAGES -->
+
+<!-- STAGES -->
+<!-- ============================== -->
+<section class="stage section">
+	<div class="container">
+		<h2 class="stage__title title">ЭТАПЫ РАБОТЫ С НАМИ</h2>
+		<ul class="stage-block__container">
+			<!-- Stage card 1 -->
+			<li class="stage-block__wrapper">
+				<div class="stage-block__stage-item stage-item">
+					<div class="stage-item__img">
+						<img src="img/stages/01Phone.svg" alt="icon" />
+					</div>
+					<div class="stage-item__content-wrapper">
+						<div class="stage-item__content">
+							<div class="stage-item__title">
+								<span class="stage-item__number">1.</span>
+								Вы звоните нам
+							</div>
+							<div class="stage-item__subtitle">
+								+7 (999) 111 22 33
+							</div>
+							<div class="stage-item__text">
+								с 10 до 22 без выходных или отправляете заявку
+							</div>
+						</div>	
+					</div>	
+				</div>
+			</li>
+			<!-- Stage card 2 -->
+			<li class="stage-block__wrapper">
+				<div class="stage-block__stage-item stage-item">
+					<div class="stage-item__img">
+						<img src="img/stages/02Chat.svg" alt="icon" />
+					</div>
+					<div class="stage-item__content-wrapper">
+						<div class="stage-item__content">
+							<div class="stage-item__title">
+								<span class="stage-item__number">2.</span>
+								мы обсуждаем
+							</div>
+							<div class="stage-item__text">
+								с Вами все условия. Вы приезжаете к нам в офис или отправляете документы по email
+							</div>
+						</div>	
+					</div>
+				</div>
+			</li>
+			<!-- Stage card 3 -->
+			<li class="stage-block__wrapper">
+				<div class="stage-block__stage-item stage-item">
+					<div class="stage-item__img">
+						<img src="img/stages/03Hands.svg" alt="icon" />
+					</div>
+					<div class="stage-item__content-wrapper">
+						<div class="stage-item__content">
+							<div class="stage-item__title">
+								<span class="stage-item__number">3.</span>
+								мы оформляем
+							</div>
+							<div class="stage-item__text">
+								все документы и одобряем Вам в банке кредит. Вы приезжаете в банк на сделку и получаете деньги
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+			
+	</div>
+</section>
+<!-- END STAGES -->
+	
+
+<!-- CONSULTATION -->
+<!-- ============================== -->
+<section class="consultation section">
+	<div class="container">
+		<div class="consultation__form consultation-form__wrapper">
+			<h3 class="consultation-form__title">бесплатная консультация</h3>
+			<div class="consultation-form__subtitle">Укажите ваши данные. Наш специалист свяжется с вами в течении 30 минут</div>
+			<form action="consultation.php" method="POST" class="consultation-form">
+
+				<div class="consultation-form__field-wrapper">
+					<div class="form__error-msg">* Введите имя</div>
+					<input autocomplete="off" type="text" name="consultation-name" data-value="Имя*" class="consultation-form__field-name input req" />
+					
+				</div>
+				<div class="consultation-form__field-wrapper">
+					<div class="form__error-msg">* Введите верный номер телефона</div>
+					<input autocomplete="off" type="tel" name="consultation-tel" data-value="Телефон*" class="consultation-form__field-phone input phone req" />
+					
+				</div>
+				<div class="consultation-form__field-wrapper">
+					<div class="form__error-msg">* Введите верный адрес электронной почты</div>
+					<input autocomplete="off" type="text" name="consultation-mail" data-value="Эл. почта*" class="consultation-form__field-mail input email req" />
+				
+				</div>
+
+				<div class="consultation-form__buttons">
+					<button type="submit" class="consultation-form__btn btn fw">Отправить</button>
+				</div>
+			</form>	
+		</div>			
+	</div>
+	<div class="consultation__background ibg">
+		<img src="img/consultation/consultationBg.jpg" alt="" />
+	</div>
+</section>
+<!-- END CONSULTATION -->
+
+
+<!-- PROCESS -->
+<!-- ============================== -->
+<section class="process section" data-scroll="active">
+	<div class="container">
+		<h2 class="process__title title">умеем решать сложности, при обращении в Банки</h2>
+			<ul class="process-block__container">
+				<!-- Process card 1 -->
+				<li class="process-block__wrapper">
+					<div class="process-block__process-item process-item">
+						<div class="process-item__img-wrap">
+							<div class="process-item__img">
+								<img src="img/process/01man.svg" alt="icon" />
+							</div>
+						</div>
+						<div class="process-item__content-wrap">
+							<div class="process-item__title">Менеджер банка охотно назначает встречу, открывает расчетный счет и ... пропадает</div>
+							<div class="process-item__text">
+								Сотрудники банков-партнеров заинтересованы в одобрении заявок наших клиентов и уделяют им больше времени, чем другим заявкам. Они докладывают нам о работе с заявкой на кадом этапе.
+							</div>
+						</div>
+					</div>
+				</li>
+				<!-- Process card 2 -->
+				<li class="process-block__wrapper">
+					<div class="process-block__process-item process-item">
+						<div class="process-item__img-wrap">
+							<div class="process-item__img">
+								<img src="img/process/02document.svg" alt="icon" />
+							</div>
+						</div>
+						<div class="process-item__content-wrap">
+							<div class="process-item__title">Банк требует заполнить десятки форм, многие из которых даже не по вашему профилю работы</div>
+							<div class="process-item__text">
+								Сотрудники банков-партнеров заинтересованы в одобрении заявок наших клиентов и уделяют им больше времени, чем другим заявкам. Они докладывают нам о работе с заявкой на кадом этапе.
+							</div>
+						</div>
+					</div>
+				</li>
+				<!-- Process card 3 -->
+				<li class="process-block__wrapper">
+					<div class="process-block__process-item process-item">
+						<div class="process-item__img-wrap">
+							<div class="process-item__img">
+								<img src="img/process/03closed.svg" alt="icon" />
+							</div>
+						</div>
+						<div class="process-item__content-wrap">
+							<div class="process-item__title">
+								Заманчивые предложения на сайте банка, а выясняется что нужно заложить имущество 
+							</div>
+							<div class="process-item__text">
+								Сотрудники банков-партнеров заинтересованы в одобрении заявок наших клиентов и уделяют им больше времени, чем другим заявкам. Они докладывают нам о работе с заявкой на кадом этапе.
+							</div>
+						</div>
+					</div>
+				</li>
+				<!-- Process card 4 -->
+				<li class="process-block__wrapper">
+					<div class="process-block__process-item process-item">
+						<div class="process-item__img-wrap">
+							<div class="process-item__img">
+								<img src="img/process/04bill.svg" alt="icon" />
+							</div>
+						</div>
+						<div class="process-item__content-wrap">
+							<div class="process-item__title">
+								Банк обещает расчет по управленке, но на деле использует только официальную отчетность
+							</div>
+							<div class="process-item__text">
+								Сотрудники банков-партнеров заинтересованы в одобрении заявок наших клиентов и уделяют им больше времени, чем другим заявкам. Они докладывают нам о работе с заявкой на кадом этапе.							
+							</div>
+						</div>
+					</div>
+				</li>
+				<!-- Process card 5 -->
+				<li class="process-block__wrapper">
+					<div class="process-block__process-item process-item">
+						<div class="process-item__img-wrap">
+							<div class="process-item__img">
+								<img src="img/process/05lock.svg" alt="icon" />
+							</div>
+						</div>
+						<div class="process-item__content-wrap">
+							<div class="process-item__title">
+								Банк радостно берет заявку. Мучает сбором пакета документов. Потом отказывает без объяснения причин	
+							</div>
+							<div class="process-item__text">
+								Сотрудники банков-партнеров заинтересованы в одобрении заявок наших клиентов и уделяют им больше времени, чем другим заявкам. Они докладывают нам о работе с заявкой на кадом этапе.
+							</div>	
+						</div>
+					</div>
+				</li>
+				<!-- Process card 6 (offer) -->
+				<li class="process-block__wrapper">
+					<div class="process-block__process-item process-item">
+						<div class="process__offer">
+							К чему все эти трудности? Мы поможем секономить время и сделаем все возможное для получения вами кредита!
+						</div>
+					</div>
+				</li>				
+			</ul>
+
+			<a href="#" class="process__btn btn">получить кредит <span> без сложностей</span></a>
+	</div>
+</section>
+<!-- END PROCESS -->
+
+
+
+
+
+
+
+
+</main>
+<!-- =================================FOOTER====================================  -->
+<!-- ===========================================================================  -->
+<footer class="footer" data-scroll="active">
+<div class="footer-top">
+	<div class="container">
+		<div class="footer-top-body">
+		
+			<div class="footer__col footer__col_description">
+				<a href="#" class="footer__logo logo">
+					<img src="img/logo/logo9.png" alt="logo" />
+				</a>
+				<div class="footer__description">
+					Команда наших специалистов имеет огромный опыт работы с различными ситуациями. Мы обладаем широким набором различных инструментов для решения различных задача в сфере финансов, налогового права и экономической безопасности. Основная задача нашей компании – быть максимально эффективными для Вашего бизнеса."
+				</div>
+			</div>
+			
+			<div class="footer__col footer__col_menu">
+				<ul class="footer-menu__list">
+					<li><a href="#" class="footer-menu__link">О компании</a></li>
+					<li><a href="#" class="footer-menu__link">Новости</a></li>
+					<li><a href="#" class="footer-menu__link">Наши видео</a></li>
+					<li><a href="#" class="footer-menu__link">Открытие новой компании</a></li>
+					<li><a href="#" class="footer-menu__link">Финансовый директор на аутсорсе</a></li>
+					<li><a href="#" class="footer-menu__link">Финансовый анализ вашей компании</a></li>
+					<li><a href="#" class="footer-menu__link">Бухгалтерское сопровождение</a></li>
+					<li><a href="#" class="footer-menu__link">HR сопровождение</a></li>
+					<li><a href="#" class="footer-menu__link">Контактная информация</a></li>
+				</ul>
+			</div>
+
+			<div class="footer__col footer__col_contacts">
+				<div class="footer-contacts">
+					<div class="footer-contacts__title">Наши контакты</div>
+					<a href="tel:+79991112233" class="footer-contacts__tel">+7 999 111-22-33</a>					
+					<div class="footer-contacts__adress">Москва, ул. Выборская, дом 99</div>
+					<div class="footer-contacts__email">Email:<a href="mailto:info@mail.ru">info@mail.ru </a> </div>
+										
+					<div class="footer-contacts__social-wrapper">
+						<a href="https://facebook.com" target="_blank" class="footer-contacts__social-item footer-contacts-social"><i class="fab fa-facebook-f footer-contacts-social__icon footer-contacts-social__icon_facebook"></i></a>
+						<a href="https://vk.com" target="_blank" class="footer-contacts__social-item footer-contacts-social"><i class="fab fa-vk footer-contacts-social__icon footer-contacts-social__icon_vk"></i></a>
+						<a href="https://instagram.com" target="_blank" class="footer-contacts__social-item footer-contacts-social"><i class="fab fa-instagram footer-contacts-social__icon footer-contacts-social__icon_instagram"></i></a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	
+	<div class="footer-bottom">
+		<div class="container">	
+			<div class="footer-bottom-body">
+				<div class="footer__copyright">© 2020. <a href="#"> ООО «Новая компания»</a>, ИНН 777777722, КПП 777777001, ОГРН 77777777407</div>
+				<div class="footer__meta">
+					<a href="#" class="footer__polytics">Политика конфиденциальности</a>
+					<a href="#" class="footer__contract">Типовой договор</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+</div>
+
+
+
+
+
+<div class="popup">
+	<div class="popup-table table">
+		<div class="cell">
+			<div class="popup-content">
+				<div class="popup-close"></div>
+				<div class="popup__title"></div>
+				<div class="popup__txt"></div>
+				<form action="#" class="popup-form form">
+					<div class="form-input">
+						<input autocomplete="off" type="text" name="form[]" data-value="" class="input" />
+					</div>
+					<div class="form-input">
+						<input autocomplete="off" type="text" name="form[]" data-value="" class="input req email" />
+					</div>
+					<div class="form-input">
+						<input autocomplete="off" type="text" name="form[]" data-value="" class="input req" />
+					</div>
+					<div class="form-button">
+						<button type="submit" class="form__btn btn fw"></button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup popup-video">
+	<div class="popup-table table">
+		<div class="cell">
+			<div class="popup-close"></div>
+			<div class="popup-video__value"></div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- Popup для отправки формы -->
+
+<div class="popup popup-message ms_1">
+	<div class="popup-table table">
+		<div class="cell">
+			<div class="popup-content">
+				<div class="popup-close">X</div>
+				<div class="popup__title">Сообщение отправлено</div>
+				<div class="popup__txt">Спасибо за проявленный интерес. Ожидайте, с Вами свяжутся.</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- Popup для логина на сайте -->
+<div class="popup popup-callback">
+	<div class="popup-table table">
+		<div class="cell">
+			<div class="popup-callback__content">
+				<div class="popup-close">X</div>
+				
+				<form action="popup.php" method="POST" class="form-callback form">
+					<div class="popup-callback__title">Отправьте заявку</div>
+					<div class="popup-callback__txt">Заполните форму</div>
+					<div class="form-callback__input">
+						<input autocomplete="off" type="text" name="callback-name" data-value="Имя*" class="popup-callback__field-name input req l" />
+						<div class="form__error-msg">* Неверный логин</div>
+					</div>
+					<div class="form-callback__input">
+						<input autocomplete="off" type="tel" name="callback-tel" data-value="Телефон*" class="popup-callback__field-tel input req phone l" />
+						<div class="form__error-msg">* Неверный номер</div>
+					</div>
+					<div class="form-callback__input">
+						<input autocomplete="off" type="text" name="callback-mail" data-value="Email*" class="popup-callback__field-mail input email req l" />
+						<div class="form__error-msg">* Неверный email</div>
+					</div>
+					<div class="form-callback__input">
+						<input autocomplete="off" type="text" name="callback-inn" data-value="ИНН" class="popup-callback__field-inn input l" />
+					</div>
+					
+					<div class="form-callback__buttons">
+						<button type="submit" class="form-callback__btn btn fw">Оставить заявку</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/vendors.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/nouislider.min.js"></script>
+<script src="js/responsive.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
